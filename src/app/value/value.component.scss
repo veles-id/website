@@ -1,0 +1,138 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b69269;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-image: url("/assets/signet.png");
+  background-repeat: no-repeat;
+  background-position: calc(100% + 110px) calc(100% + 130px);
+  background-size: 66%;
+  position: relative;
+
+  .value {
+    display: flex;
+    padding: 6rem 5rem;
+    box-sizing: border-box;
+    height: 100%;
+
+    &__text {
+      width: 50%;
+
+      &__header {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        h1 {
+          font-size: 3.5rem;
+          margin: 30px 0;
+          font-weight: 700;
+        }
+
+        &__subheader {
+          font-style: normal;
+          font-size: 28px;
+          font-weight: 300;
+          line-height: 1.5;
+          width: 90%;
+
+          &__block {
+            margin-top: 1.5em;
+
+            &--bold {
+              font-weight: 600;
+            }
+          }
+        }
+
+        &__spacer {
+          height: 15%;
+        }
+      }
+    }
+
+    &__pics {
+      position: relative;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__front {
+        position: absolute;
+        z-index: 2;
+        margin-top: 100px;
+
+        &__img {
+          width: 64%;
+        }
+      }
+
+      &__back {
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+        display: flex;
+        justify-content: center;
+        margin-top: -100px;
+
+        &__img {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    background-position: calc(100% + 80px) calc(100% + 50px);
+    height: 1280px;
+
+    .value {
+      flex-direction: column;
+      padding: 3em;
+
+      &__text {
+        width: 100%;
+
+        &__header {
+          h1 {
+            font-size: 2em;
+          }
+
+          &__subheader {
+            font-size: 20px;
+          }
+        }
+      }
+
+      &__pics {
+        width: 100%;
+        flex: 1;
+
+        &__front {
+          margin-top: 80px;
+
+          &__img {
+            width: 50%;
+            margin-left: 20px;
+          }
+        }
+
+        &__back {
+          right: 0px;
+          margin-top: 0px;
+
+          &__img {
+            width: 40%;
+            margin-left: 110px;
+          }
+        }
+      }
+    }
+  }
+}

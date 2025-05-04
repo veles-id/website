@@ -1,0 +1,98 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/assets/waves_big.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  h3 {
+    font-size: 28px;
+    color: #b69269;
+    font-weight: 600;
+    margin: 1.1em 0;
+  }
+
+  .identity {
+    display: flex;
+    padding: 6rem 5rem;
+    box-sizing: border-box;
+    height: 100%;
+    flex: 1;
+    flex-direction: column;
+
+    &__header {
+      h1 {
+        font-size: 3.5rem;
+        margin: 30px 0;
+        font-weight: 700;
+        color: #222;
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 5rem;
+      padding: 3rem;
+
+      &__block {
+        width: 25%;
+
+        &__icon {
+          transform: scale(1.8);
+          color: #b69269;
+          font-weight: 100;
+        }
+
+        &__text {
+          line-height: 1.5;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    // height: 143vh;
+    height: 1330px;
+
+    .identity {
+      padding: 48px;
+
+      h1 {
+        font-size: 2em;
+      }
+      &__content {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 4rem;
+
+        h3 {
+          font-size: 24px;
+        }
+
+        &__block {
+          width: 100%;
+          margin-bottom: 80px;
+
+          &__text {
+            font-size: 20px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<div class="timeline">
+  <div class="timeline__less"></div>
+  <div class="timeline__header">
+    <h1>Changes in the balance of power</h1>
+    <div class="timeline__header__subheader">
+      @if (breakpoint() !== 'XSmall' && 'Small'){Increased levels of control
+      over personal data and identifiers have a series of consequences for the
+      balance of power.} Decentralized identity systems remove the power from
+      the state and corporations and put it back in the hands of individuals.
+    </div>
+  </div>
+  <div class="timeline__stepper">
+    <cdk-accordion class="timeline__accordion">
+      @for (item of items; track item; let index = $index) {
+      <cdk-accordion-item
+        #accordionItem="cdkAccordionItem"
+        class="timeline__accordion__item"
+        role="button"
+        tabindex="0"
+        [attr.id]="'accordion-header-' + index"
+        [attr.aria-expanded]="accordionItem.expanded"
+        [attr.aria-controls]="'accordion-body-' + index"
+        [expanded]="expanded(item)"
+        [class.active]="accordionItem.expanded"
+      >
+        <table>
+          <tr (click)="!accordionItem.expanded ? accordionItem.toggle() : ''">
+            <td
+              class="timeline__accordion__item__header timeline__accordion--years"
+            >
+              <div
+                class="timeline__accordion__item__header__number"
+                [@numberSize]="accordionItem.expanded ? 'expanded' : 'normal'"
+              >
+                {{ item.years }}
+              </div>
+              <!-- [style.display]="accordionItem.expanded ? '' : 'none'" -->
+              <div
+                class="timeline__accordion__item__header__label"
+                [@labelSize]="accordionItem.expanded ? 'visible' : 'hidden'"
+              >
+                years ago
+              </div>
+            </td>
+            <td><div class="timeline__accordion__item__ball"></div></td>
+            <td class="timeline__accordion__item__header">
+              <div>
+                <div class="timeline__accordion__item__header__title">
+                  <h3>{{ item.title }}</h3>
+                </div>
+                <!-- [style.display]="accordionItem.expanded ? '' : 'none'" -->
+                <div
+                  class="timeline__accordion__item__header__content"
+                  [@expandCollapse]="
+                    accordionItem.expanded ? 'expanded' : 'collapsed'
+                  "
+                >
+                  @if (breakpoint() === 'XSmall' && 'Small'){
+                  <div
+                    class="timeline__accordion__item__header__content__years"
+                  >
+                    <strong> {{ item.years }}</strong> years ago
+                  </div>
+                  }
+                  {{ item.content }}
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </cdk-accordion-item>
+      }
+    </cdk-accordion>
+  </div>
+</div>

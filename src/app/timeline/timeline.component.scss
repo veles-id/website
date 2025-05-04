@@ -1,0 +1,296 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-image: linear-gradient(
+      rgba(232, 232, 232, 0.8),
+      rgba(232, 232, 232, 0.8)
+    ),
+    url("/assets/waves_big.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.8em;
+  }
+
+  .timeline {
+    &__less {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 64px;
+      background-color: #b69269;
+    }
+
+    &__header {
+      margin: 50px;
+
+      h1 {
+        font-size: 3.5rem;
+        margin: 30px 0;
+        font-weight: 700;
+        color: #b69269;
+      }
+
+      &__subheader {
+        font-style: normal;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #666;
+      }
+    }
+
+    &__stepper {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px;
+
+      .mat-stepper-vertical {
+        background: transparent;
+      }
+    }
+
+    &__accordion {
+      display: block;
+      width: 100%;
+      height: 440px;
+      padding: 0 10em;
+
+      &__item {
+        border: 0;
+        width: 80%;
+
+        table {
+          width: 100%;
+
+          tr {
+            display: flex;
+            cursor: pointer;
+
+            td {
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              flex-wrap: wrap;
+
+              &:first-child {
+                justify-content: flex-end;
+                padding-right: 40px;
+                margin-top: 5px;
+              }
+
+              &:last-child {
+                justify-content: flex-start;
+                padding-left: 40px;
+              }
+
+              &:not(:first-child):not(:last-child) {
+                margin-top: 5px;
+                position: relative;
+                padding-bottom: 36px;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 30px;
+                  bottom: 0;
+                  left: 50%;
+                  width: 1px;
+                  background-color: #b69269;
+                  transform: translateX(-50%);
+                }
+              }
+            }
+          }
+        }
+
+        &__ball {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background-color: #ccc;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          .timeline {
+            &__accordion {
+              &__item {
+                &__header {
+                  &__title {
+                    color: #b69269;
+                    transition: color 0.2s ease;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.active {
+          line-height: 0.73;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .timeline {
+            &__accordion {
+              &__item {
+                &__ball {
+                  background-color: #b69269;
+                }
+
+                &__header {
+                  &__title {
+                    color: #b69269;
+                    font-size: 1.2em;
+
+                    &:hover {
+                      cursor: default;
+                    }
+                  }
+
+                  &__number {
+                    font-size: 10em;
+                    display: flex;
+                    align-items: flex-start;
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &__header {
+          align-items: flex-start;
+          width: 48%;
+          color: #333;
+
+          &__number {
+            font-weight: 700;
+          }
+
+          &__label {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 30px;
+            font-weight: 100;
+            width: 100%;
+            color: #b69269;
+            padding-bottom: 27px;
+            margin-top: 2px;
+            margin-right: 2px;
+          }
+
+          &__title {
+            font-size: 1.1em;
+          }
+
+          &__content {
+            font-size: 1.1em;
+            color: #222;
+            line-height: 1.5;
+            font-weight: 400;
+            padding-bottom: 33px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    height: 960px;
+    padding-top: 5rem;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    .timeline {
+      &__header {
+        h1 {
+          font-size: 2em;
+        }
+
+        &__subheader {
+          font-size: 20px;
+        }
+      }
+
+      &__accordion {
+        padding: 0 44px;
+
+        &--years {
+          display: none !important;
+        }
+
+        &__item {
+          &__header {
+            table tr td {
+              &:first-child {
+                display: none;
+              }
+            }
+
+            padding-left: 20px !important;
+            width: auto;
+
+            &__label {
+              display: none;
+            }
+
+            &__number {
+              display: none !important;
+            }
+
+            &__content {
+              padding-bottom: 0;
+            }
+          }
+
+          &.active {
+            .timeline {
+              &__accordion {
+                &__item {
+                  &__header {
+                    &__content {
+                      padding-bottom: 20px !important;
+
+                      &__years {
+                        padding-bottom: 12px;
+                        margin-top: -6px;
+                        color: #999;
+                        font-weight: 300;
+
+                        strong {
+                          color: #444;
+                          font-weight: 600;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
