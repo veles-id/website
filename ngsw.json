@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1746388250075,
+  "timestamp": 1746388349010,
   "index": "https://veles-id.github.io/website/index.html",
   "assetGroups": [
     {
@@ -97,7 +97,7 @@
     "https://veles-id.github.io/website/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "https://veles-id.github.io/website/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "https://veles-id.github.io/website/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "https://veles-id.github.io/website/index.html": "c0bf0abfa03fb66108c95e1fda3ede3c35aac502",
+    "https://veles-id.github.io/website/index.html": "52387437e74b52fbd94d65ef471d26e5bef1f0db",
     "https://veles-id.github.io/website/main-XXNKSP3Z.js": "d5d9ecd9701a939d060e9b1df4348d5f3940244e",
     "https://veles-id.github.io/website/manifest.webmanifest": "d73bc58343b4b21376d1347b3f10227942340d96",
     "https://veles-id.github.io/website/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
