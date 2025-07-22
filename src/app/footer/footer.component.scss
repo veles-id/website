@@ -15,7 +15,6 @@
   .footer {
     cursor: default;
     display: flex;
-    // padding: 6rem 5rem;
     box-sizing: border-box;
     height: 100%;
     justify-content: space-between;
@@ -110,7 +109,6 @@
 
   @media (max-width: 800px) {
     background-position: calc(100% + 80px) calc(100% + 50px);
-    // height: 160vh;
     height: 1540px;
     background-size: 70%;
     overflow: hidden;
@@ -132,7 +130,8 @@
           }
 
           &__subheader {
-            font-size: 20px;
+            font-size: 18px;
+            font-weight: 400;
           }
         }
 

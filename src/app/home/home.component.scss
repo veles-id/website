@@ -47,7 +47,7 @@
         font-size: 28px;
         font-weight: 300;
         line-height: 1.5;
-        color: #666;
+        color: #222;
       }
     }
 
@@ -75,17 +75,29 @@
       flex-direction: column;
       padding: 3em;
 
+      &__more {
+        height: 24px;
+      }
+
       &__text {
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.14rem;
+
+        h1 {
+          margin: 20px 0;
+        }
 
         &__subheader {
-          font-size: 20px;
+          font-size: 18px;
+          font-weight: 400;
         }
       }
 
       &__image {
-        margin: 30px 20px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

@@ -90,7 +90,7 @@
 
   @media (max-width: 800px) {
     background-position: calc(100% + 80px) calc(100% + 50px);
-    height: 1280px;
+    height: 1200px;
 
     .value {
       flex-direction: column;
@@ -105,7 +105,8 @@
           }
 
           &__subheader {
-            font-size: 20px;
+            font-size: 18px;
+            font-weight: 400;
           }
         }
       }

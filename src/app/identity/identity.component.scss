@@ -59,13 +59,13 @@
           line-height: 1.5;
           font-size: 18px;
           font-weight: 400;
+          color: #222;
         }
       }
     }
   }
 
   @media (max-width: 800px) {
-    // height: 143vh;
     height: 1330px;
 
     .identity {
@@ -80,7 +80,7 @@
         margin-top: 4rem;
 
         h3 {
-          font-size: 24px;
+          font-size: 22px;
         }
 
         &__block {
@@ -88,8 +88,8 @@
           margin-bottom: 80px;
 
           &__text {
-            font-size: 20px;
-            font-weight: 300;
+            font-size: 18px;
+            font-weight: 400;
           }
         }
       }

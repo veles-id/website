@@ -47,7 +47,7 @@
         font-size: 28px;
         font-weight: 300;
         line-height: 1.5;
-        color: #666;
+        color: #222;
       }
     }
 
@@ -213,8 +213,8 @@
   }
 
   @media (max-width: 800px) {
-    height: 960px;
-    padding-top: 5rem;
+    height: 1000px;
+    padding-top: 3rem;
     align-items: flex-start;
 
     h3 {
@@ -229,8 +229,13 @@
         }
 
         &__subheader {
-          font-size: 20px;
+          font-size: 18px;
+          font-weight: 400;
         }
+      }
+
+      &__less {
+        height: 32px;
       }
 
       &__accordion {
@@ -261,6 +266,10 @@
 
             &__content {
               padding-bottom: 0;
+
+              &__text {
+                font-size: 16px;
+              }
             }
           }
 
